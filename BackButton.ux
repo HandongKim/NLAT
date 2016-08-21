@@ -1,0 +1,9 @@
+<Grid ux:Class="backButton" Height="30" Width="20" HitTestMode="LocalBounds">
+	<Rectangle CornerRadius="2" Height="4" Width="30" Color="#44669f">
+		<Rotation Degrees="-35" />
+	</Rectangle>
+	<Rectangle CornerRadius="2" Height="4" Width="30" Color="#44669f">
+		<Rotation Degrees="35" />
+	</Rectangle>
+	<Clicked><Callback Handler="{goBack}" /></Clicked>
+</Grid>

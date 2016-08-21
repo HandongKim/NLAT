@@ -1,0 +1,223 @@
+<App Background="#FDF0CC">
+	<!-- Color1="#FDF0CC" Color2="#F7CAB1" Color3="#E8A0A2" Color4="#C2768E" -->
+
+	<FileImageSource File="Assets/2014/1.png" ux:Key="pb20141" />
+	<FileImageSource File="Assets/2014/2.png" ux:Key="pb20142" />
+	<FileImageSource File="Assets/2014/3.png" ux:Key="pb20143" />
+	<FileImageSource File="Assets/2014/4.png" ux:Key="pb20144" />
+	<FileImageSource File="Assets/2014/5.png" ux:Key="pb20145" />
+	<FileImageSource File="Assets/2014/6.png" ux:Key="pb20146" />
+	<FileImageSource File="Assets/2014/7.png" ux:Key="pb20147" />
+	<FileImageSource File="Assets/2014/8.png" ux:Key="pb20148" />
+	<FileImageSource File="Assets/2014/9.png" ux:Key="pb20149" />
+	<FileImageSource File="Assets/2014/10.png" ux:Key="pb201410" />
+	<FileImageSource File="Assets/2014/11.png" ux:Key="pb201411" />
+	<FileImageSource File="Assets/2014/12.png" ux:Key="pb201412" />
+	<FileImageSource File="Assets/2014/13.png" ux:Key="pb201413" />
+	<FileImageSource File="Assets/2014/14.png" ux:Key="pb201414" />
+	<FileImageSource File="Assets/2014/15.png" ux:Key="pb201415" />
+	<FileImageSource File="Assets/2014/16.png" ux:Key="pb201416" />
+	<FileImageSource File="Assets/2014/17.png" ux:Key="pb201417" />
+	<FileImageSource File="Assets/2014/18.png" ux:Key="pb201418" />
+	<FileImageSource File="Assets/2014/19.png" ux:Key="pb201419" />
+	<FileImageSource File="Assets/2014/20.png" ux:Key="pb201420" />
+	<FileImageSource File="Assets/2014/21.png" ux:Key="pb201421" />
+	<FileImageSource File="Assets/2014/22.png" ux:Key="pb201422" />
+	<FileImageSource File="Assets/2014/23.png" ux:Key="pb201423" />
+	<FileImageSource File="Assets/2014/24.png" ux:Key="pb201424" />
+	<FileImageSource File="Assets/2014/25.png" ux:Key="pb201425" />
+	<FileImageSource File="Assets/2014/26.png" ux:Key="pb201426" />
+	<FileImageSource File="Assets/2014/27.png" ux:Key="pb201427" />
+	<FileImageSource File="Assets/2014/28.png" ux:Key="pb201428" />
+	<FileImageSource File="Assets/2014/29.png" ux:Key="pb201429" />
+	<FileImageSource File="Assets/2014/31.png" ux:Key="pb2014서1" />
+	<FileImageSource File="Assets/2014/32.png" ux:Key="pb2014서2" />
+	<FileImageSource File="Assets/2014/33.png" ux:Key="pb2014서3" />
+	<FileImageSource File="Assets/2014/34.png" ux:Key="pb2014서4" />
+	<FileImageSource File="Assets/2014/sol_1.png" ux:Key="sol20141" />
+	<FileImageSource File="Assets/2014/sol_2.png" ux:Key="sol20142" />
+	<FileImageSource File="Assets/2014/sol_3.png" ux:Key="sol20143" />
+	<FileImageSource File="Assets/2014/sol_4.png" ux:Key="sol20144" />
+	<FileImageSource File="Assets/2014/sol_5.png" ux:Key="sol20145" />
+	<FileImageSource File="Assets/2014/sol_6.png" ux:Key="sol20146" />
+	<FileImageSource File="Assets/2014/sol_7.png" ux:Key="sol20147" />
+	<FileImageSource File="Assets/2014/sol_8.png" ux:Key="sol20148" />
+	<FileImageSource File="Assets/2014/sol_9.png" ux:Key="sol20149" />
+	<FileImageSource File="Assets/2014/sol_10.png" ux:Key="sol201410" />
+	<FileImageSource File="Assets/2014/sol_11.png" ux:Key="sol201411" />
+	<FileImageSource File="Assets/2014/sol_12.png" ux:Key="sol201412" />
+	<FileImageSource File="Assets/2014/sol_13.png" ux:Key="sol201413" />
+	<FileImageSource File="Assets/2014/sol_14.png" ux:Key="sol201414" />
+	<FileImageSource File="Assets/2014/sol_15.png" ux:Key="sol201415" />
+	<FileImageSource File="Assets/2014/sol_16.png" ux:Key="sol201416" />
+	<FileImageSource File="Assets/2014/sol_17.png" ux:Key="sol201417" />
+	<FileImageSource File="Assets/2014/sol_18.png" ux:Key="sol201418" />
+	<FileImageSource File="Assets/2014/sol_19.png" ux:Key="sol201419" />
+	<FileImageSource File="Assets/2014/sol_20.png" ux:Key="sol201420" />
+	<FileImageSource File="Assets/2014/sol_21.png" ux:Key="sol201421" />
+	<FileImageSource File="Assets/2014/sol_22.png" ux:Key="sol201422" />
+	<FileImageSource File="Assets/2014/sol_23.png" ux:Key="sol201423" />
+	<FileImageSource File="Assets/2014/sol_24.png" ux:Key="sol201424" />
+	<FileImageSource File="Assets/2014/sol_25.png" ux:Key="sol201425" />
+	<FileImageSource File="Assets/2014/sol_26.png" ux:Key="sol201426" />
+	<FileImageSource File="Assets/2014/sol_27.png" ux:Key="sol201427" />
+	<FileImageSource File="Assets/2014/sol_28.png" ux:Key="sol201428" />
+	<FileImageSource File="Assets/2014/sol_29.png" ux:Key="sol201429" />
+	<FileImageSource File="Assets/2014/sol_31.png" ux:Key="sol2014서1" />
+	<FileImageSource File="Assets/2014/sol_32.png" ux:Key="sol2014서2" />
+	<FileImageSource File="Assets/2014/sol_33.png" ux:Key="sol2014서3" />
+	<FileImageSource File="Assets/2014/sol_34.png" ux:Key="sol2014서4" />
+	<FileImageSource File="Assets/2015/1.png" ux:Key="pb20151" />
+	<FileImageSource File="Assets/2015/2.png" ux:Key="pb20152" />
+	<FileImageSource File="Assets/2015/3.png" ux:Key="pb20153" />
+	<FileImageSource File="Assets/2015/4.png" ux:Key="pb20154" />
+	<FileImageSource File="Assets/2015/5.png" ux:Key="pb20155" />
+	<FileImageSource File="Assets/2015/6.png" ux:Key="pb20156" />
+	<FileImageSource File="Assets/2015/7.png" ux:Key="pb20157" />
+	<FileImageSource File="Assets/2015/8.png" ux:Key="pb20158" />
+	<FileImageSource File="Assets/2015/9.png" ux:Key="pb20159" />
+	<FileImageSource File="Assets/2015/10.png" ux:Key="pb201510" />
+	<FileImageSource File="Assets/2015/11.png" ux:Key="pb201511" />
+	<FileImageSource File="Assets/2015/12.png" ux:Key="pb201512" />
+	<FileImageSource File="Assets/2015/13.png" ux:Key="pb201513" />
+	<FileImageSource File="Assets/2015/14.png" ux:Key="pb201514" />
+	<FileImageSource File="Assets/2015/15.png" ux:Key="pb201515" />
+	<FileImageSource File="Assets/2015/16.png" ux:Key="pb201516" />
+	<FileImageSource File="Assets/2015/17.png" ux:Key="pb201517" />
+	<FileImageSource File="Assets/2015/18.png" ux:Key="pb201518" />
+	<FileImageSource File="Assets/2015/19.png" ux:Key="pb201519" />
+	<FileImageSource File="Assets/2015/20.png" ux:Key="pb201520" />
+	<FileImageSource File="Assets/2015/21.png" ux:Key="pb201521" />
+	<FileImageSource File="Assets/2015/22.png" ux:Key="pb201522" />
+	<FileImageSource File="Assets/2015/23.png" ux:Key="pb201523" />
+	<FileImageSource File="Assets/2015/24.png" ux:Key="pb201524" />
+	<FileImageSource File="Assets/2015/25.png" ux:Key="pb201525" />
+	<FileImageSource File="Assets/2015/26.png" ux:Key="pb201526" />
+	<FileImageSource File="Assets/2015/27.png" ux:Key="pb201527" />
+	<FileImageSource File="Assets/2015/28.png" ux:Key="pb201528" />
+	<FileImageSource File="Assets/2015/29.png" ux:Key="pb201529" />
+	<FileImageSource File="Assets/2015/31.png" ux:Key="pb2015서1" />
+	<FileImageSource File="Assets/2015/32.png" ux:Key="pb2015서2" />
+	<FileImageSource File="Assets/2015/33.png" ux:Key="pb2015서3" />
+	<FileImageSource File="Assets/2015/34.png" ux:Key="pb2015서4" />
+	<FileImageSource File="Assets/2015/sol_1.png" ux:Key="sol20151" />
+	<FileImageSource File="Assets/2015/sol_2.png" ux:Key="sol20152" />
+	<FileImageSource File="Assets/2015/sol_3.png" ux:Key="sol20153" />
+	<FileImageSource File="Assets/2015/sol_4.png" ux:Key="sol20154" />
+	<FileImageSource File="Assets/2015/sol_5.png" ux:Key="sol20155" />
+	<FileImageSource File="Assets/2015/sol_6.png" ux:Key="sol20156" />
+	<FileImageSource File="Assets/2015/sol_7.png" ux:Key="sol20157" />
+	<FileImageSource File="Assets/2015/sol_8.png" ux:Key="sol20158" />
+	<FileImageSource File="Assets/2015/sol_9.png" ux:Key="sol20159" />
+	<FileImageSource File="Assets/2015/sol_10.png" ux:Key="sol201510" />
+	<FileImageSource File="Assets/2015/sol_11.png" ux:Key="sol201511" />
+	<FileImageSource File="Assets/2015/sol_12.png" ux:Key="sol201512" />
+	<FileImageSource File="Assets/2015/sol_13.png" ux:Key="sol201513" />
+	<FileImageSource File="Assets/2015/sol_14.png" ux:Key="sol201514" />
+	<FileImageSource File="Assets/2015/sol_15.png" ux:Key="sol201515" />
+	<FileImageSource File="Assets/2015/sol_16.png" ux:Key="sol201516" />
+	<FileImageSource File="Assets/2015/sol_17.png" ux:Key="sol201517" />
+	<FileImageSource File="Assets/2015/sol_18.png" ux:Key="sol201518" />
+	<FileImageSource File="Assets/2015/sol_19.png" ux:Key="sol201519" />
+	<FileImageSource File="Assets/2015/sol_20.png" ux:Key="sol201520" />
+	<FileImageSource File="Assets/2015/sol_21.png" ux:Key="sol201521" />
+	<FileImageSource File="Assets/2015/sol_22.png" ux:Key="sol201522" />
+	<FileImageSource File="Assets/2015/sol_23.png" ux:Key="sol201523" />
+	<FileImageSource File="Assets/2015/sol_24.png" ux:Key="sol201524" />
+	<FileImageSource File="Assets/2015/sol_25.png" ux:Key="sol201525" />
+	<FileImageSource File="Assets/2015/sol_26.png" ux:Key="sol201526" />
+	<FileImageSource File="Assets/2015/sol_27.png" ux:Key="sol201527" />
+	<FileImageSource File="Assets/2015/sol_28.png" ux:Key="sol201528" />
+	<FileImageSource File="Assets/2015/sol_29.png" ux:Key="sol201529" />
+	<FileImageSource File="Assets/2015/sol_31.png" ux:Key="sol2015서1" />
+	<FileImageSource File="Assets/2015/sol_32.png" ux:Key="sol2015서2" />
+	<FileImageSource File="Assets/2015/sol_33.png" ux:Key="sol2015서3" />
+	<FileImageSource File="Assets/2015/sol_34.png" ux:Key="sol2015서4" />
+	<FileImageSource File="Assets/2016/1.png" ux:Key="pb20161" />
+	<FileImageSource File="Assets/2016/2.png" ux:Key="pb20162" />
+	<FileImageSource File="Assets/2016/3.png" ux:Key="pb20163" />
+	<FileImageSource File="Assets/2016/4.png" ux:Key="pb20164" />
+	<FileImageSource File="Assets/2016/5.png" ux:Key="pb20165" />
+	<FileImageSource File="Assets/2016/6.png" ux:Key="pb20166" />
+	<FileImageSource File="Assets/2016/7.png" ux:Key="pb20167" />
+	<FileImageSource File="Assets/2016/8.png" ux:Key="pb20168" />
+	<FileImageSource File="Assets/2016/9.png" ux:Key="pb20169" />
+	<FileImageSource File="Assets/2016/10.png" ux:Key="pb201610" />
+	<FileImageSource File="Assets/2016/11.png" ux:Key="pb201611" />
+	<FileImageSource File="Assets/2016/12.png" ux:Key="pb201612" />
+	<FileImageSource File="Assets/2016/13.png" ux:Key="pb201613" />
+	<FileImageSource File="Assets/2016/14.png" ux:Key="pb201614" />
+	<FileImageSource File="Assets/2016/15.png" ux:Key="pb201615" />
+	<FileImageSource File="Assets/2016/16.png" ux:Key="pb201616" />
+	<FileImageSource File="Assets/2016/17.png" ux:Key="pb201617" />
+	<FileImageSource File="Assets/2016/18.png" ux:Key="pb201618" />
+	<FileImageSource File="Assets/2016/19.png" ux:Key="pb201619" />
+	<FileImageSource File="Assets/2016/20.png" ux:Key="pb201620" />
+	<FileImageSource File="Assets/2016/21.png" ux:Key="pb201621" />
+	<FileImageSource File="Assets/2016/22.png" ux:Key="pb201622" />
+	<FileImageSource File="Assets/2016/23.png" ux:Key="pb201623" />
+	<FileImageSource File="Assets/2016/24.png" ux:Key="pb201624" />
+	<FileImageSource File="Assets/2016/25.png" ux:Key="pb201625" />
+	<FileImageSource File="Assets/2016/26.png" ux:Key="pb201626" />
+	<FileImageSource File="Assets/2016/27.png" ux:Key="pb201627" />
+	<FileImageSource File="Assets/2016/28.png" ux:Key="pb201628" />
+	<FileImageSource File="Assets/2016/29.png" ux:Key="pb201629" />
+	<FileImageSource File="Assets/2016/31.png" ux:Key="pb2016서1" />
+	<FileImageSource File="Assets/2016/32.png" ux:Key="pb2016서2" />
+	<FileImageSource File="Assets/2016/33.png" ux:Key="pb2016서3" />
+	<FileImageSource File="Assets/2016/34.png" ux:Key="pb2016서4" />
+	<FileImageSource File="Assets/2016/sol_1.png" ux:Key="sol20161" />
+	<FileImageSource File="Assets/2016/sol_2.png" ux:Key="sol20162" />
+	<FileImageSource File="Assets/2016/sol_3.png" ux:Key="sol20163" />
+	<FileImageSource File="Assets/2016/sol_4.png" ux:Key="sol20164" />
+	<FileImageSource File="Assets/2016/sol_5.png" ux:Key="sol20165" />
+	<FileImageSource File="Assets/2016/sol_6.png" ux:Key="sol20166" />
+	<FileImageSource File="Assets/2016/sol_7.png" ux:Key="sol20167" />
+	<FileImageSource File="Assets/2016/sol_8.png" ux:Key="sol20168" />
+	<FileImageSource File="Assets/2016/sol_9.png" ux:Key="sol20169" />
+	<FileImageSource File="Assets/2016/sol_10.png" ux:Key="sol201610" />
+	<FileImageSource File="Assets/2016/sol_11.png" ux:Key="sol201611" />
+	<FileImageSource File="Assets/2016/sol_12.png" ux:Key="sol201612" />
+	<FileImageSource File="Assets/2016/sol_13.png" ux:Key="sol201613" />
+	<FileImageSource File="Assets/2016/sol_14.png" ux:Key="sol201614" />
+	<FileImageSource File="Assets/2016/sol_15.png" ux:Key="sol201615" />
+	<FileImageSource File="Assets/2016/sol_16.png" ux:Key="sol201616" />
+	<FileImageSource File="Assets/2016/sol_17.png" ux:Key="sol201617" />
+	<FileImageSource File="Assets/2016/sol_18.png" ux:Key="sol201618" />
+	<FileImageSource File="Assets/2016/sol_19.png" ux:Key="sol201619" />
+	<FileImageSource File="Assets/2016/sol_20.png" ux:Key="sol201620" />
+	<FileImageSource File="Assets/2016/sol_21.png" ux:Key="sol201621" />
+	<FileImageSource File="Assets/2016/sol_22.png" ux:Key="sol201622" />
+	<FileImageSource File="Assets/2016/sol_23.png" ux:Key="sol201623" />
+	<FileImageSource File="Assets/2016/sol_24.png" ux:Key="sol201624" />
+	<FileImageSource File="Assets/2016/sol_25.png" ux:Key="sol201625" />
+	<FileImageSource File="Assets/2016/sol_26.png" ux:Key="sol201626" />
+	<FileImageSource File="Assets/2016/sol_27.png" ux:Key="sol201627" />
+	<FileImageSource File="Assets/2016/sol_28.png" ux:Key="sol201628" />
+	<FileImageSource File="Assets/2016/sol_29.png" ux:Key="sol201629" />
+	<FileImageSource File="Assets/2016/sol_31.png" ux:Key="sol2016서1" />
+	<FileImageSource File="Assets/2016/sol_32.png" ux:Key="sol2016서2" />
+	<FileImageSource File="Assets/2016/sol_33.png" ux:Key="sol2016서3" />
+	<FileImageSource File="Assets/2016/sol_34.png" ux:Key="sol2016서4" />
+
+	<Router ux:Name="router" />
+
+	<Text ux:Class="TextH">
+		<Font File="Assets/Fonts/Easop.ttf" />
+	</Text>
+
+	<DockPanel>
+		<StatusBarBackground Dock="Top" />
+	
+		<Navigator DefaultTemplate="welcomeAnimation">
+			<welcomAnimation ux:Template="welcomeAnimation" router="router" />
+
+			<selectYear ux:Template="selectYear" router="router" />
+
+			<selectProblem ux:Template="selectProblem" router="router" />
+
+			<contents ux:Template="contents" router="router" />
+		</Navigator>
+	</DockPanel>
+	
+</App>

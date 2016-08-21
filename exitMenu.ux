@@ -1,0 +1,29 @@
+<Rectangle ux:Name="exitMenu" Width="220" Height="110" CornerRadius="10" Color="#FFFFEE" Alignment="Center" ZOffset="-1" Opacity="0" HitTestMode="None" >
+	<Stroke Width="5" Color="#777"/>
+	<StackPanel ItemSpacing="30">
+		<Text Value="앱에서 나가시겠습니까?" FontSize="20" Alignment="Center" Margin="10" />
+
+		<StackPanel Orientation="Horizontal" ItemSpacing="30">
+			<Rectangle Width="50" Height="30" Margin="30,0,0,0">
+				<Text Value="예" FontSize="20" Alignment="Center" />
+				<Clicked>
+					<Toggle Target="popupExit" />
+					<HomeScreen Type="CallIntent" />
+				</Clicked>
+			</Rectangle>
+
+			<Rectangle Width="70" Height="30">
+				<Text Value="아니오" FontSize="20" Alignment="Center">
+					<Clicked><Toggle Target="popupExit" /></Clicked>
+				</Text>
+			</Rectangle>
+		</StackPanel>
+	</StackPanel>
+
+	<WhileTrue ux:Name="popupExit">
+		<Change exitMenu.ZOffset="1" />
+		<Change exitMenu.Opacity="1" />
+		<Change exitMenu.HitTestMode="LocalBoundsAndChildren" />
+		<Scale Target="exitMenu" Factor="1.1" Duration="0.1" DurationBack="0.1" />
+	</WhileTrue>
+</Rectangle>

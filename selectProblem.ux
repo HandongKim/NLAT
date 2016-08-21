@@ -1,0 +1,181 @@
+<Page ux:Class="selectProblem">
+	<Router ux:Dependency="router" />
+
+	<JavaScript>
+		var Observable = require("FuseJS/Observable");
+		var Storage = require("FuseJS/Storage");
+		var Backend = require("Backend");
+
+		var pbYear = Observable();
+		var passData = Observable();
+		var selectedType = Observable();
+		var pbList = Observable();
+		var SelectProblem = Observable();
+		var WriteProblem = Observable();
+		var Selected = Observable();
+
+		this.Parameter.onValueChanged(function(x){
+			pbYear.value = x.year;
+			makeProblem();
+		});
+
+		function makeProblem() {
+			if (pbYear.value == "2014") {
+				Selected = Storage.readSync("2014.txt");
+				if (Selected == "") {
+					Storage.write("2014.txt", "000000000000000000000000000000000");
+					Selected = Storage.readSync("2014.txt");
+				}
+			} else if (pbYear.value == "2015") {
+				Selected = Storage.readSync("2015.txt");
+				if (Selected == "") {
+					Storage.write("2015.txt", "000000000000000000000000000000000");
+					Selected = Storage.readSync("2015.txt");
+				}
+			} else if (pbYear.value == "2016") {
+				Selected = Storage.readSync("2016.txt");
+				if (Selected == "") {
+					Storage.write("2016.txt", "000000000000000000000000000000000");
+					Selected = Storage.readSync("2016.txt");
+				}
+			}
+
+			SelectProblem.removeWhere(function(problem){
+				return problem.number < 34;
+			});
+
+			WriteProblem.removeWhere(function(problem){
+				return problem.number < 5;
+			});
+
+			for (var i = 0 ; i <= 28 ; i++) {
+				SelectProblem.add({number:i+1, selected:Selected[i], type:"select"});
+			}
+
+			for (var i = 0 ; i <= 3 ; i++) {
+				WriteProblem.add({number:i+1, selected:Selected[i+29], type:"write"});
+			}
+		}
+
+		function viewInfo(obj) {
+			Backend.fetchProblems(function(x){
+				x.forEach(function(problem){
+					if(problem.confirm == pbYear.value + selectedType.value + obj.data.number){
+						passData.value = pbYear.value + selectedType.value + obj.data.number;
+						pbList.value = problem;
+					}
+				});
+			});
+
+			var tem = "";
+			if (obj.data.type == "select") {
+				selectedType.value = "";
+				for (var i = 0; i <= Selected.length - 1 ; i++) {
+					if ( i == obj.data.number - 1 ) {
+						tem = tem + "1";
+					} else {
+						tem = tem + Selected[i];
+					}
+				}
+			} else if (obj.data.type == "write") {
+				selectedType.value = "서";
+				for (var i = 0; i <= Selected.length - 1 ; i++) {
+					if ( i == obj.data.number + 28 ) {
+						tem = tem + "1";
+					} else {
+						tem = tem + Selected[i];
+					}
+				}
+			}
+
+			if (pbYear.value == "2014") {
+				Storage.write("2014.txt", tem);
+			} else if (pbYear.value == "2015") {
+				Storage.write("2015.txt", tem);
+			} else if (pbYear.value == "2016") {
+				Storage.write("2016.txt", tem);
+			}
+			Selected = tem;
+		}
+
+		function goProblemPage() {
+			router.push("contents", {confirm : passData.value});			
+		}
+
+		module.exports = {
+			goBack: function(){
+				router.goBack();
+			},
+			viewInfo: viewInfo,
+			goProblemPage: goProblemPage,
+			pbList: pbList,
+			SelectProblem: SelectProblem,
+			WriteProblem: WriteProblem,
+			pbYear: pbYear,
+			makeProblem: makeProblem
+		};
+	</JavaScript>
+
+	<WhileActive>
+		<Callback Handler="{makeProblem}" />
+		<Change viewPbInfo.Value="false" />
+	</WhileActive>
+
+	<ScrollView>
+		<StackPanel ItemSpacing="5">
+			<Grid ColumnCount="3" Columns="1*, 5*, 1*">
+				<backButton />
+				<Text Value="{pbYear}" FontSize="35" Alignment="Center" Margin="10" />
+			</Grid>
+
+			<Grid ColumnCount="6" RowCount="6" CellSpacing="10" Margin="20, 0">
+				<Rectangle CornerRadius="5" Color="#E8A0A2" ColumnSpan="6">
+					<Text Value="선택형 문항" Color="#220043" Alignment="Center" FontSize="30" />
+				</Rectangle>
+				<Each Items="{SelectProblem}">
+					<SelectButton Width="40">
+						<Text Value="{number}" Color="#220043" Alignment="Center" FontSize="30" />
+						<Image ux:Name="img" File="Assets/Check.png" Width="40" Height="40" Opacity="{selected}" />
+						<Clicked>
+							<Set img.Opacity="1" />
+							<Set viewPbInfo.Value="true" />
+							<Callback Handler="{viewInfo}" />
+						</Clicked>
+					</SelectButton>
+				</Each>
+			</Grid>
+			<Grid ColumnCount="6" RowCount="2" CellSpacing="10" Margin="20, 5">
+				<Rectangle CornerRadius="5" Color="#E8A0A2" ColumnSpan="6">
+					<Text Value="서답형 문항" Color="#220043" Alignment="Center" FontSize="30" />
+				</Rectangle>
+				<Each Items="{WriteProblem}">
+					<SelectButton Width="40">
+						<Text Value="{number}" Color="#220043" Alignment="Center" FontSize="30" />
+						<Image ux:Name="img2" File="Assets/check.png" Width="40" Height="40" Opacity="{selected}" />
+						<Clicked>
+							<Set img2.Opacity="1" />
+							<Set viewPbInfo.Value="true" />
+							<Callback Handler="{viewInfo}" />
+						</Clicked>
+					</SelectButton>
+				</Each>
+			</Grid>
+
+			<StackPanel ux:Name="infoBox" Alignment="TopCenter" Width="80%" Visibility="Hidden">
+				<Rectangle Color="#95CE50" CornerRadius="3" Width="120" Height="40" Margin="0,0,0,15">
+					<Text Value="문제 풀기" FontSize="30" Alignment="Center" />
+					<WhilePressed><Scale Factor="0.85" /></WhilePressed>
+					<Clicked>
+						<Callback Handler="{goProblemPage}" />
+					</Clicked>
+				</Rectangle>
+
+				<Image Source="{DataToResource pbList.pbPath}" Color="#FDF0CC" Alignment="Center" />
+
+				<WhileTrue ux:Name="viewPbInfo">
+					<Change infoBox.Visibility="Visible" />
+				</WhileTrue>
+			</StackPanel>
+		</StackPanel>
+	</ScrollView>
+</Page>

@@ -1,0 +1,29 @@
+<Page ux:Class="welcomAnimation">
+	<Router ux:Dependency="router" />
+
+	<JavaScript>
+		module.exports = {
+			goSelectYear: function(){
+				router.goto("selectYear", {});
+			}
+		};
+	</JavaScript>
+
+	<DockPanel>
+		<Image File="Assets/symbol.png" ux:Name="logo" Alignment="Center" Color="#C2768E" Width="90%" Dock="Fill" />
+
+		<Panel Dock="Bottom" Height="1">
+			<NativeViewHost>
+				<WebView Url="https://youtu.be/oYKsOSvf4N4" />
+			</NativeViewHost>
+		</Panel>
+	</DockPanel>
+	
+	<WhileActive>
+		<Change timeline.TargetProgress="1" />
+	</WhileActive>
+
+	<Timeline ux:Name="timeline">
+		<Callback Handler="{goSelectYear}" Delay="3" />
+	</Timeline>
+</Page>

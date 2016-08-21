@@ -1,0 +1,65 @@
+<Page ux:Class="selectYear">
+	<Router ux:Dependency="router" />
+
+	<JavaScript>
+		var Storage = require("FuseJS/Storage");
+
+		module.exports = {
+			go2014: function(){
+				router.push("selectProblem", {year: "2014"});
+			},
+			go2015: function(){
+				router.push("selectProblem", {year: "2015"});
+			},
+			go2016: function(){
+				router.push("selectProblem", {year: "2016"});
+			},
+			goBack: function(){
+				router.goBack();
+			},
+			clear: function(){
+				Storage.write("2014.txt", "000000000000000000000000000000000");
+				Storage.write("2015.txt", "000000000000000000000000000000000");
+				Storage.write("2016.txt", "000000000000000000000000000000000");
+			}
+		};
+	</JavaScript>
+
+	<WhileActive>
+		<Change pageloaded.Value="True" Delay="0.01" />
+	</WhileActive>
+
+	<StackPanel ItemSpacing="5">
+		<Text Value="국가수준" FontSize="35" Alignment="Center" Margin="0,10, 0, 0" />
+		<Text Value="학업 성취도평가" FontSize="35" Alignment="Center" />
+		<Text Value="중3 수학" FontSize="30" Alignment="Right" Margin="10, 0" />
+
+		<SelectButton Alignment="Center" Width="200" Margin="30">
+			<Text Value="2014년" Alignment="Center" FontSize="30" />
+			<Clicked><Callback Handler="{go2014}" /></Clicked>
+		</SelectButton>
+
+		<SelectButton Alignment="Center" Width="200">
+			<Text Value="2015년" Alignment="Center" FontSize="30" />
+			<Clicked><Callback Handler="{go2015}" /></Clicked>
+		</SelectButton>
+
+		<SelectButton Alignment="Center" Width="200" Margin="30">
+			<Text Value="2016년" Alignment="Center" FontSize="30" />
+			<Clicked><Callback Handler="{go2016}" /></Clicked>
+		</SelectButton>
+
+		<SelectButton Alignment="Center" Width="200">
+			<Text Value="초기화" Alignment="Center" FontSize="30" />
+			<Clicked><Callback Handler="{clear}" /></Clicked>
+		</SelectButton>
+
+		<WhileTrue ux:Name="pageloaded">
+			<OnBackButton>
+				<Toggle Target="popupExit" />
+			</OnBackButton>
+		</WhileTrue>
+	</StackPanel>
+
+	<ux:Include File="exitMenu.ux" />
+</Page>

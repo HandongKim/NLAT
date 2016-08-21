@@ -1,0 +1,144 @@
+<Page ux:Class="contents">
+	<Router ux:Dependency="router" />
+
+	<JavaScript>
+		var Observable = require("FuseJS/Observable");
+		var Backend = require("Backend");
+
+		var pbList = Observable({});
+
+		this.Parameter.onValueChanged(function(x){
+			Backend.fetchProblems(function(result){
+				result.forEach(function(problem){
+					if (x.confirm === problem.confirm){
+						pbList.value = problem;
+					}
+				});
+			});
+		});
+
+		module.exports = {
+			pbList: pbList,
+			goBack: function(){
+				router.goBack();
+			}
+		}
+	</JavaScript>
+
+	<Text ux:Class="TabHeader" TextColor="White" Alignment="CenterLeft" Opacity="0" Margin="20,0,0,0" MinWidth="100"/>
+	<Image ux:Class="TabIcon" Width="25" Height="25" />
+
+	<WhileActive>
+		<Set nav.Active="page1" />
+	</WhileActive>
+
+	<StackPanel>
+		<Grid Columns="auto,1*,auto" Height="40" Dock="Top" Margin="10">
+			<backButton />
+
+			<Text ux:Name="titleText" Value="{pbList.name}" TextColor="#75AE30" FontSize="35" Alignment="Center" />
+		</Grid>
+
+		<Panel Dock="Top" Height="60" >
+			<Rectangle ux:Name="indicator" CornerRadius="30" Color="#75AE30" LayoutMaster="p1" Margin="0,10" Width="100%" ZOffset="0.1"/>
+			<Grid ColumnCount="5">
+				<Panel ux:Name="p1" Column="0" ColumnSpan="2"/>
+				<Panel ux:Name="p4" Column="3" ColumnSpan="2"/>
+			</Grid>
+
+			<Grid ZOffset="1" Margin="-20">
+				<Column ux:Name="col1" Width="1" WidthMetric="Proportion"/>
+				<Column ux:Name="col2" Width="1" WidthMetric="Proportion"/>
+				<Column ux:Name="col3" Width="1" WidthMetric="Proportion"/>
+
+				<Panel HitTestMode="LocalBounds">
+					<Grid Columns="auto,1*" Margin="30,0" Alignment="Left">
+						<TabIcon ux:Name="c1" File="Assets/problem.png" Color="#75AE30"/>
+						<TabHeader ux:Name="h1" Value="문제" />
+					</Grid>
+					<Clicked>
+						<Set nav.Active="page1" />
+					</Clicked>
+				</Panel>
+				<Panel HitTestMode="LocalBounds">
+					<Grid Columns="auto,1*" Margin="40,0" Alignment="Left">
+						<TabIcon ux:Name="c2" File="Assets/solution.png" Color="#37A1D7"/>
+						<TabHeader ux:Name="h2" Value="해설"/>
+					</Grid>
+					<Clicked>
+						<Set nav.Active="page2" />
+					</Clicked>
+				</Panel>
+				<Panel HitTestMode="LocalBounds">
+					<Grid ux:Name="co3" Columns="auto,1*" Margin="30,0" Alignment="Left">
+						<TabIcon ux:Name="c3" File="Assets/video.png" Color="#FF9803"/>
+						<TabHeader ux:Name="h3" Value="동영상"/>
+					</Grid>
+					<Clicked>
+						<Set nav.Active="page3" />
+					</Clicked>
+				</Panel>
+			</Grid>
+		</Panel>
+		<PageControl ux:Name="nav" TransitionEasing="BackOut">
+			<Attractor ux:Name="indicatorColorAttractor" Target="indicator.Color" Value="#75AE30" />
+			<Rectangle ux:Name="bgColor" Layer="Background" Color="#75AE30" Opacity="0.12"/>
+			<Attractor ux:Name="bgColorAttractor" Target="bgColor.Color" Value="#75AE30" />
+			<Attractor ux:Name="titleTextAttractor" Target="titleText.TextColor" Value="#75AE30" />
+
+			<Image ux:Class="PagePlaceholder" Margin="8,10,8,0" StretchMode="UniformToFill" ContentAlignment="Top"/>
+
+			<Page ux:Name="page1" Color="#FDF0CC">
+				<ScrollView>
+					<Image Source="{DataToResource pbList.pbPath}" Alignment="TopCenter" Color="#FDF0CC" />
+				</ScrollView>
+				<WhileActive Threshold="0.5">
+					<Set indicatorColorAttractor.Value="#75AE30" />
+					<Set bgColorAttractor.Value="#75AE30" />
+					<Set titleTextAttractor.Value="#75AE30" />
+				</WhileActive>
+				<ActivatingAnimation>
+					<Change h1.Opacity="1" />
+					<Change col1.Width="2" />
+					<Change c1.Color="White" />
+				</ActivatingAnimation>
+			</Page>
+			<Page ux:Name="page2" Color="#FDF0CC">
+				<ScrollView>
+					<Image Source="{DataToResource pbList.solPath}" Alignment="TopCenter" Color="#FDF0CC" />
+				</ScrollView>
+				<WhileActive Threshold="0.5">
+					<Set indicatorColorAttractor.Value="#37A1D7" />
+					<Set bgColorAttractor.Value="#37A1D7" />
+					<Set titleTextAttractor.Value="#37A1D7" />
+				</WhileActive>
+				<ActivatingAnimation>
+					<Change h2.Opacity="1" />
+					<Change col2.Width="2" />
+					<Change c2.Color="White" />
+				</ActivatingAnimation>
+			</Page>
+			<Page ux:Name="page3">
+				<Panel Height="400">
+					<NativeViewHost>
+						<WebView Url="{pbList.videoPath}" />
+					</NativeViewHost>
+				</Panel>
+				<WhileActive Threshold="0.5">
+					<Set indicatorColorAttractor.Value="#FF9803" />
+					<Set bgColorAttractor.Value="#FF9803" />
+					<Set titleTextAttractor.Value="#FF9803" />
+				</WhileActive>
+				<ActivatingAnimation Scale="0.5">
+					<Move Target="indicator" X="1" RelativeTo="PositionOffset" RelativeNode="p4"/>
+				</ActivatingAnimation>
+				<ActivatingAnimation>
+					<Change h3.Opacity="1" />
+					<Change col3.Width="2" />
+					<Change c3.Color="White" />
+					<Change co3.Margin="50,0"/>
+				</ActivatingAnimation>
+			</Page>
+		</PageControl>
+	</StackPanel>
+</Page>
